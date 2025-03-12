@@ -4,7 +4,7 @@ def calculate(salary):
     for item in salary:
         total += int(item[1])
 
-    average = int(total / len(salary))
+    average = total / len(salary)
 
     return total, average
 

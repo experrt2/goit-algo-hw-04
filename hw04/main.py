@@ -19,6 +19,9 @@ def change_phone(args, contacts):
     else:
         return "Name does not exist in contacts"
 
+def show_all(contacts):
+    return contacts
+
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")
@@ -33,13 +36,13 @@ def main():
         elif command == "hello":
             print("How can I help you?")
         elif command == "add":
-            print(add_contact(args, contacts), contacts)
+            print(add_contact(args, contacts))
         elif command == "phone":
-            print(show_phone(args, contacts), contacts)
+            print(show_phone(args, contacts))
         elif command == "change":
-            print(change_phone(args, contacts), contacts)
+            print(change_phone(args, contacts))
         elif command == "all":
-            print(contacts)
+            print(show_all(contacts))
         else:
             print("Invalid command.")
 
